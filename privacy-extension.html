@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,6 +50,7 @@
         p, ul { margin-bottom: 1rem; font-size: 1.1rem; }
         ul { padding-left: 2rem; list-style-type: square; }
         li { margin-bottom: 0.5rem; }
+        hr { border: none; border-top: 4px dashed #000; margin: 4rem 0; }
         .back-link {
             display: inline-block;
             margin-bottom: 2rem;
@@ -63,11 +64,48 @@
         }
         .back-link:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000; }
         footer { margin-top: 3rem; font-size: 0.9rem; color: #666; font-style: italic; }
+        .lang-badge { display: inline-block; background: #eee; padding: 2px 8px; font-size: 0.8rem; font-weight: bold; margin-bottom: 4px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">← TORNA AL SITO</a>
+        <a href="index.html" class="back-link">← BACK TO HOME / TORNA ALLA HOME</a>
+        
+        <div class="lang-badge">ENGLISH (Standard)</div>
+        <h1>Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> March 2026</p>
+
+        <h2>Introduction</h2>
+        <p>This Privacy Policy describes how the <strong>WhatItCosts</strong> extension handles user data. Our policy is simple: <strong>we collect nothing.</strong></p>
+
+        <h2>Data Collection</h2>
+        <p>This extension does not collect, transmit, or share any personal data. All user settings and preferences (such as hourly wage, chosen currency, or language) are stored exclusively in your local browser settings via <code>chrome.storage.sync</code> and never leave your device.</p>
+
+        <h2>Third-Party Services — Payments</h2>
+        <p>Payments for the Pro version are handled via <strong>Extension Pay</strong> (extensionpay.com), which uses <strong>Stripe</strong> as a payment processor. No payment data (credit cards, billing addresses, etc.) ever passes through or is stored by the extension.</p>
+        <p>To access the Pro version, Extension Pay may require the creation of an account. Data provided during registration is handled by Extension Pay according to their own privacy policy, available at extensionpay.com. The extension only receives an encrypted confirmation of payment status.</p>
+
+        <h2>Browser Permissions</h2>
+        <p>The extension requires the following permissions for local technical operation only:</p>
+        <ul>
+            <li><strong>storage</strong> — to save user settings (wage, currency) and sync them across devices.</li>
+            <li><strong>activeTab</strong> — to read prices on webpages only when the extension is active on the current tab.</li>
+            <li><strong>scripting</strong> — to inject the logic that identifies prices and shows the conversion into work hours directly on the page.</li>
+        </ul>
+        <p>None of these permissions are used to monitor user activity or transmit data to external servers.</p>
+
+        <h2>Cookies and Tracking</h2>
+        <p>This extension does not use cookies, tracking pixels, analytics, or any other user behavior monitoring tools.</p>
+
+        <h2>Changes to Privacy Policy</h2>
+        <p>Any changes to this policy will be published on this page with an updated date at the top. Continued use of the extension after changes constitutes acceptance of the new policy.</p>
+
+        <h2>Contact</h2>
+        <p>For any privacy-related questions, you can write to: <strong>fm@solutions.com</strong></p>
+
+        <hr>
+
+        <div class="lang-badge">ITALIANO (Traduzione)</div>
         <h1>Privacy Policy</h1>
         <p><strong>Ultimo aggiornamento:</strong> Marzo 2026</p>
 
@@ -97,7 +135,7 @@
         <p>Eventuali modifiche a questa policy saranno pubblicate su questa pagina con aggiornamento della data in alto. L'uso continuato dell'estensione dopo le modifiche costituisce accettazione della nuova policy.</p>
 
         <h2>Contatti</h2>
-        <p>Per qualsiasi domanda relativa alla privacy puoi scrivere a: fm@solutions.com</p>
+        <p>Per qualsiasi domanda relativa alla privacy puoi scrivere a: <strong>fm@solutions.com</strong></p>
 
         <footer>
             Note: FM Solutions - WhatItCosts Browser Extension
