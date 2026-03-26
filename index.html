@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatItCosts | Browser Extension</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.6;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Neobrutalist styles */
+        .box {
+            border: 4px solid #000000;
+            background: #ffffff;
+            box-shadow: 8px 8px 0px #000000;
+            transition: all 0.2s ease;
+        }
+
+        .box:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0px #000000;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            padding: 16px 32px;
+            border: 4px solid #000000;
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #000000;
+            box-shadow: 8px 8px 0px #000000;
+            transform: translate(-2px, -2px);
+        }
+
+        /* Layout */
+        header {
+            padding: 24px;
+            border-bottom: 4px solid #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        main {
+            flex: 1;
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: -4px;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.15);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            border-left: 8px solid #000;
+            padding-left: 24px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            padding: 24px;
+        }
+
+        .feature-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            border-bottom: 4px solid #000;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #000;
+            color: #fff;
+            border: 4px solid #000;
+            margin-bottom: 4rem;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+
+        .cta-section .btn {
+            background: #fff;
+            color: #000;
+            box-shadow: 8px 8px 0px rgba(255,255,255,0.3);
+        }
+
+        .cta-section .btn:hover {
+            background: #000;
+            color: #fff;
+            box-shadow: 8px 8px 0px #fff;
+        }
+
+        footer {
+            border-top: 4px solid #000000;
+            padding: 32px 24px;
+            text-align: center;
+            font-weight: 700;
+            background: #000;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .hero { align-items: stretch; text-align: left; }
+            h1 { font-size: 3.5rem; }
+            .hero p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">► WhatItCosts</div>
+        <nav>
+            <a href="#features" class="btn" style="padding: 8px 16px; font-size: 1rem;">Features</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>STOP.<br>THINK.<br>BUY?</h1>
+            <p>The browser extension that translates e-commerce prices into <strong>your actual working hours</strong>. Stop impulse buying instantly.</p>
+            <a href="#" class="btn">Add to Chrome &rarr;</a>
+            
+            <div class="box" style="margin-top: 2rem; max-width: 100%; border-width: 6px;">
+                <div style="background: #000; color: #fff; padding: 12px; font-weight: 700; display: flex; justify-content: space-between; border-bottom: 4px solid #000;">
+                    <span>AMAZON.COM</span>
+                    <span>X</span>
+                </div>
+                <div style="padding: 32px; font-family: sans-serif; background: #fff;">
+                    <h3 style="font-size: 24px; margin-bottom: 12px; color: #111;">Noise Cancelling Headphones</h3>
+                    <div style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap;">
+                        <span style="font-size: 40px; font-weight: bold; color: #000; letter-spacing: -1px;">$299.00</span>
+                        <div style="border: 3px solid #000; padding: 8px 16px; font-family: 'Space Mono'; font-weight: bold; background: #fff; box-shadow: 6px 6px 0 #000; font-size: 1.1rem; border-radius: 4px;">
+                            = 24.5 WORK HOURS
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="box feature-card">
+                <h2>1. Reality Check</h2>
+                <p>Prices are automatically converted into the exact number of hours you need to work to afford the item.</p>
+            </div>
+            <div class="box feature-card">
+                <h2>2. Impulse Blocker</h2>
+                <p>Intercepts the "Add to Cart" button. Forces a 10-second reflection pause and shows equivalent values (e.g. "x15 Coffees") before you can actually buy.</p>
+            </div>
+            <div class="box feature-card">
+                <h2>3. Zero Tracking</h2>
+                <p>100% local processing. No user data leaves your browser. Radical privacy by design.</p>
+            </div>
+        </section>
+
+        <section id="pricing" class="box" style="margin-bottom: 4rem; display: flex; flex-direction: column; align-items: center; border-width: 6px; padding: 4rem 2rem; background: #fff;">
+            <div style="display: inline-block; background: #000; color: #fff; padding: 8px 16px; font-weight: 800; font-size: 1.2rem; transform: rotate(-2deg); margin-bottom: 24px; box-shadow: 4px 4px 0 #e0e0e0;">
+                ONE-TIME PAYMENT
+            </div>
+            <h2 style="font-size: clamp(2.5rem, 6vw, 4rem); text-transform: uppercase; letter-spacing: -2px; margin-bottom: 1rem; text-align: center;">LIFETIME ACCESS: €2.99</h2>
+            <div style="font-size: 1.5rem; text-align: left; max-width: 700px; margin: 32px auto; border-left: 8px solid #000; padding-left: 24px; font-weight: 700;">
+                <p>The cost of a cheap coffee today.<br>The cure for impulse spending forever.</p>
+                <p style="margin-top: 24px; font-weight: 400; font-size: 1.2rem; line-height: 1.8;">By forcing a 10-second reflection on the "Add to Cart" button, the PRO version intercepts your dopamine hits. It prevents hundreds of euros in useless purchases. <strong>It literally pays for itself the first time it helps you <em>not</em> buy something.</strong></p>
+            </div>
+            <a href="#" class="btn" style="font-size: 1.5rem; padding: 20px 40px; margin-top: 1rem;">GET LIFETIME ACCESS</a>
+        </section>
+
+        <section class="cta-section box">
+            <h2>Ready to save money?</h2>
+            <p style="margin-bottom: 40px; font-size: 1.2rem;">Join the users who stopped buying garbage they don't need.</p>
+            <a href="#" class="btn" style="border-radius: 4px;">INSTALL EXTENSION</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>WHATITCOSTS © 2026. FM Solutions.</p>
+    </footer>
+</body>
+</html>
