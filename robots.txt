@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Prevent AI crawlers from using content for training if desired
+# User-agent: GPTBot
+# Disallow: /
